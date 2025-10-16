@@ -14,7 +14,7 @@ Puede hablar contigo, recordar información importante y responder en texto o po
 - Todo automatizado dentro de n8n.
 
   <img src="imgs/video1.gif" alt="Video Memoria" width="300">
-  [Descargar audio](imgs/data.mpga.mp3)
+  (Hay un ejemplo del audio en la carpeta IMGS)
 
 ---
 
