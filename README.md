@@ -13,7 +13,7 @@ Puede hablar contigo, recordar información importante y responder en texto o po
 - Consulta y gestiona eventos en Google Calendar.  
 - Todo automatizado dentro de n8n.
 
-   ![Video Memoria](imgs/video1.gif "")
+  <img src="imgs/video1.gif" alt="Video Memoria" width="300">
 
 ---
 
@@ -25,8 +25,8 @@ Puede hablar contigo, recordar información importante y responder en texto o po
 4. Genera una respuesta coherente usando la información guardada.  
 5. Si aprende algo nuevo, lo guarda automáticamente en la hoja.
 6. Decide si contestar mediante audio o texto.
-   
-   ![Imagen workflow](imgs/Captura1.PNG "")
+
+   <img src="imgs/Captura1.PNG" alt="Imagen workflow">
 
 ---
 
@@ -42,7 +42,7 @@ Puede hablar contigo, recordar información importante y responder en texto o po
 3. Edita el prompt y aclarale tu informacion (Si tienes calendarios compartidos dales nombre)
 4. Ejecuta el flujo y empieza a hablar con Alia.
 
-   ![Video calendario](imgs/video2.gif "")
+   <img src="imgs/video2.gif" alt="Video Calendario" width="300">
 
 ---
 
@@ -50,7 +50,7 @@ Puede hablar contigo, recordar información importante y responder en texto o po
 
 Dejaré el excel para descargar
 
-   ![Imagen sheets](imgs/Captura2.PNG "")
+   <img src="imgs/Captura2.PNG" alt="Imagen sheets">
 
 ---
 
