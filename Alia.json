@@ -1,0 +1,1141 @@
+{
+  "name": "Alia",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Calendar', ``, 'string') }}",
+          "mode": "id",
+          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        },
+        "returnAll": true,
+        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', ``, 'string') }}",
+        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        112,
+        -80
+      ],
+      "id": "1ae141e2-190e-4d6c-bc09-9ad416145904",
+      "name": "Get many events in Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "mHfdUbUGk4loNmuo",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Calendar', ``, 'string') }}",
+          "mode": "id",
+          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        },
+        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "8337e727-65c7-4aec-a96d-0f4a1fbedf8f",
+      "name": "Create an event in Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "mHfdUbUGk4loNmuo",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "calendar": {
+          "__rl": true,
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Calendar', ``, 'string') }}",
+          "mode": "id",
+          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        },
+        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        320,
+        -80
+      ],
+      "id": "0945935f-c349-4426-a3d3-5b122b943d4d",
+      "name": "Delete an event in Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "mHfdUbUGk4loNmuo",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "calendar": {
+          "__rl": true,
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Calendar', ``, 'string') }}",
+          "mode": "id",
+          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        },
+        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', ``, 'string') }}",
+        "updateFields": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        432,
+        -16
+      ],
+      "id": "112aa46a-9872-45e2-b4dd-03f840c81b72",
+      "name": "Update an event in Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "mHfdUbUGk4loNmuo",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "=1IuTMbAgutHH1WmNHiUEfOsyvMUeUyfHDbEYULMm5Uoc",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "=gid=0",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        528,
+        -144
+      ],
+      "id": "0eeb4795-8d6f-4b1a-870e-43778dc666dd",
+      "name": "Get MEMORIA",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "IiK3yHkWLuipuzzm",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "responder",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "4d74fc88-7f05-413a-93bb-d00401a3be92"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Responder"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e5119199-7dd7-4458-b30f-e07c6805c7b7",
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "guardar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Guardar"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        784,
+        -528
+      ],
+      "id": "a53052fb-2d3a-4cb3-8a51-1dc5a91d223e",
+      "name": "Guardar Memoria"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.tipo }}",
+                    "rightValue": "audio",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "4d74fc88-7f05-413a-93bb-d00401a3be92"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Audio"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e5119199-7dd7-4458-b30f-e07c6805c7b7",
+                    "leftValue": "={{ $json.tipo }}",
+                    "rightValue": "texto",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Texto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        640,
+        -416
+      ],
+      "id": "67d20665-95ff-4579-8ae8-9c6fa615f430",
+      "name": "Audio o Texto"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-flash-latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -112,
+        -176
+      ],
+      "id": "2ac441cc-1b39-4d52-9a8f-9c415932ac32",
+      "name": "Gemini",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "miQRbDUvY79FgrAr",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Mensaje enviado').first().json.message.chat.id }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        -176
+      ],
+      "id": "9033439b-2519-4ef6-a9f7-6ddedaacc590",
+      "name": "BBDD"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.message.voice.file_id }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -272,
+        -528
+      ],
+      "id": "66219c83-6371-4cc6-ad43-57cee44f52da",
+      "name": "Recibir Audio",
+      "webhookId": "e0769871-efe3-49da-81a5-2f88a6fdd33f",
+      "credentials": {
+        "telegramApi": {
+          "id": "iMfXvDbuVmiuSuhT",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "inputType": "binary",
+        "simplify": false,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        -144,
+        -528
+      ],
+      "id": "a626b46a-91f3-4405-ba39-e81c2481adf4",
+      "name": "Transcribir",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "miQRbDUvY79FgrAr",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f8e61829-2793-479d-a33f-615b5abe79bf",
+              "name": "text",
+              "value": "={{ $json.message.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f5bf27a1-15b4-49ac-82b9-1bfc762028a8",
+      "name": "Pasar texto",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -208,
+        -352
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.voice.file_id }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Audio"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "78036c48-1c14-41ac-8b33-3e04f140acef",
+                    "leftValue": "={{ $json.message.text}}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Text"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "826db5e5-11b4-4b45-9d3f-e8402f4f8f4a",
+                    "leftValue": "={{ $json.message.document.file_name }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Document"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "eb784b9c-b762-4eab-ba41-af6174cf3375",
+      "name": "Audio o Texto1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -512,
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "0c402bdc-7fa2-4fa1-96d6-f02853cfdaa1",
+      "name": "Mensaje enviado",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -720,
+        -384
+      ],
+      "webhookId": "55acc711-c248-4ac9-b6cd-e295c2d33f4b",
+      "credentials": {
+        "telegramApi": {
+          "id": "iMfXvDbuVmiuSuhT",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "guardar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "4d74fc88-7f05-413a-93bb-d00401a3be92"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Guardar"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e5119199-7dd7-4458-b30f-e07c6805c7b7",
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "responder",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Responder"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        784,
+        -304
+      ],
+      "id": "4267539c-d657-437b-9005-d0493e906e3f",
+      "name": "Guardar Memoria1"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1IuTMbAgutHH1WmNHiUEfOsyvMUeUyfHDbEYULMm5Uoc",
+          "mode": "list",
+          "cachedResultName": "MEMORIA PERSISTENTE",
+          "cachedResultUrl": "Documento google"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Hoja 1",
+          "cachedResultUrl": "Hoja del documento google"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Id": "={{ $('Mensaje enviado').item.json.message.message_id }}",
+            "Mensaje": "={{ $('Mensaje enviado').item.json.message.text }}",
+            "Memoria": "={{ $json.memoria }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Id",
+              "displayName": "Id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Mensaje",
+              "displayName": "Mensaje",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Memoria",
+              "displayName": "Memoria",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        912,
+        -416
+      ],
+      "id": "18a2545d-6b98-4b2d-94a2-4de307532c81",
+      "name": "Guardar",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "IiK3yHkWLuipuzzm",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f8e61829-2793-479d-a33f-615b5abe79bf",
+              "name": "text",
+              "value": "={{ $json.respuesta }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c057e302-a07e-4955-882a-054b263dd45f",
+      "name": "Parse",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1008,
+        -304
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f8e61829-2793-479d-a33f-615b5abe79bf",
+              "name": "text",
+              "value": "={{ $json.respuesta }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c608a673-8f0e-455e-80da-13f3c0bf60b8",
+      "name": "Parse1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1008,
+        -528
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const lines = $input.first().json.output.split(\"\\n\");\nconst formato = lines[0].replace(\"Formato: \", \"\").trim();\nconst respuesta = lines.slice(1).join(\"\\n\").trim();\n\nreturn [{\n  json: {\n    formato,\n    respuesta\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        384,
+        -416
+      ],
+      "id": "b2055532-5212-41c8-83af-0c7f029d952f",
+      "name": "FORMATO"
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst tipo = input.formato || \"\";\nconst content = input.respuesta || \"\";\n\nlet action = \"responder\";\nlet memoria = \"\";\nlet respuesta = content;\n\n// Si contiene \"Memoria:\", se separa en memoria y respuesta\nif (content.startsWith(\"Memoria:\")) {\n  // Elimina la etiqueta \"Memoria:\"\n  const texto = content.replace(\"Memoria:\", \"\").trim();\n  \n  // Divide en dos partes: antes y después del primer salto de línea\n  const partes = texto.split(\"\\n\");\n  memoria = partes[0].trim();\n  respuesta = partes.slice(1).join(\"\\n\").trim(); // resto del texto\n  \n  action = \"guardar\";\n}\n\nreturn [\n  {\n    json: {\n      tipo,\n      action,\n      memoria,\n      respuesta\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        512,
+        -416
+      ],
+      "id": "f6a8eae6-951a-46f4-8643-2d0f40e407de",
+      "name": "GUARDAR"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.elevenlabs.io/v1/text-to-speech/uU1QvfOppdkePeLtG9pI",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "xi-api-key",
+              "value": "eab6756b4159d14ab7b1e0e46e180b046c16b54e17f0a23c01c93757903c2a16"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "={{ $json.respuesta }}"
+            },
+            {
+              "name": "model_id",
+              "value": "eleven_multilingual_v2"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1232,
+        -528
+      ],
+      "id": "adaefd18-4d6e-4829-a626-f4a02c848a08",
+      "name": "Dar voz"
+    },
+    {
+      "parameters": {
+        "operation": "sendAudio",
+        "chatId": "={{ $('Mensaje enviado').item.json.message.chat.id }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1360,
+        -528
+      ],
+      "id": "af6fe78c-50d3-41d8-a79e-c1c0111ccb12",
+      "name": "Contestar audio",
+      "webhookId": "b96b7a41-9806-455f-b72e-00aa638eda71",
+      "credentials": {
+        "telegramApi": {
+          "id": "iMfXvDbuVmiuSuhT",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Mensaje enviado').item.json.message.chat.id }}",
+        "text": "={{ $json.text\n  .replace(/<p>/g, '')\n  .replace(/<\\/p>/g, '\\n')\n  .replace(/<ul>|<\\/ul>|<li>|<\\/li>/g, '')\n  .replace(/<br\\s*\\/?>/g, '\\n')\n  .replace(/\\\\n/g, '\\n')\n  .replace(/&nbsp;/g, ' ')\n  .replace(/!/g, '\\\\!')\n  .replace(/¡/g, '\\\\¡')\n  .replace(/\\\\/g, '')\n  .trim()\n}}\n",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1184,
+        -304
+      ],
+      "id": "7dea5c17-bfdb-4874-918b-a6583298efa2",
+      "name": "Contestar Texto",
+      "webhookId": "b96b7a41-9806-455f-b72e-00aa638eda71",
+      "credentials": {
+        "telegramApi": {
+          "id": "iMfXvDbuVmiuSuhT",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f8e61829-2793-479d-a33f-615b5abe79bf",
+              "name": "=respuesta",
+              "value": "={{ $json.text\n  .replace(/<p>/g, '')\n  .replace(/<\\/p>/g, '\\n')\n  .replace(/<ul>|<\\/ul>|<li>|<\\/li>/g, '')\n  .replace(/<br\\s*\\/?>/g, '\\n')\n  .replace(/\\\\n/g, '\\n')\n  .replace(/&nbsp;/g, ' ')\n  .replace(/!/g, '\\\\!')\n  .replace(/¡/g, '\\\\¡')\n  .replace(/\\\\/g, '')\n  .trim()\n}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "71028764-24fa-4385-8ea7-2a11a2f34497",
+      "name": "Formatar",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1120,
+        -528
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Mensaje enviado').item?.json?.message?.text || $json.candidates[0].content.parts[0].text || $json.message.document.file_name || '' }}\n",
+        "options": {
+          "systemMessage": "=Tiene acceso a ti el usuario 'Tu Nombre'.\nTienes la capacidad de hablar por voz.\n\nEres un asistente que puede responder en texto o audio. \nCada vez que respondas, indica PRIMERO el formato que usas, escribiendo:\nFormato: audio\no\nFormato: texto\nDecide usar audio cuando la respuesta sea explicativa, compleja o requiera entonación, y texto cuando sea corta, simple o se trate de una lista o algo que deba ser visual.\n\nDespues, cuando creas que algo es importante para recordar, responde con este formato:\n\nMemoria: <texto a recordar>\n\nSi no hay nada que recordar, responde de manera normal.\n\nLuego, escribe tu respuesta.\n\nTienes acceso a una memoria persistente almacenada en Google Sheets, donde debes leer información relevante sobre el usuario o sobre el contexto de las conversaciones anteriores.\nUsa esta memoria para recordar hechos importantes, como preferencias, tareas pendientes, información personal relevante o decisiones anteriores.\nAntes de responder, debes consultar la memoria para verificar si ya existe información relacionada.\nEjemplos de uso:\n\nGuardar datos importantes mencionados por el usuario.\n\nRecordar instrucciones permanentes (p. ej. “Prefiere respuestas sin emojis”).\n\nRecuperar información previa para mantener coherencia en la conversación.\n\nNo guardes información sensible (como contraseñas, tokens o datos personales confidenciales).\n\n\n\n\nEres una asistenta personal amable, eficiente y cercana, disponible para ayudarme a mi a traves de Telegram con tareas cotidianas, como gestionar el calendario de Google, comprobar disponibilidad y recuperar eventos. Siempre mantén la comunicación clara, directa, natural y breve.\n\nTus Capacidades:\n\nConversaciones generales: Responde preguntas y proporciona información útil.\n\nGestión de calendario: Consulta disponibilidad, próximos eventos y recordatorios en Google Calendar.\n\nEstilo de Comunicación:\nResponde de manera clara, directa y concisa, sin mensajes ni demasiado largos ni demasiado breves.\n\nSi el usuario envía un mensaje de voz, responde de forma fluida como si estuvieras hablando directamente con él.\n\nConciencia del Contexto:\n\nHoy es {{ $now.format('cccc') }}, {{ $now.format('yyyy-MM-dd HH:mm') }}. Usa esta información para dar respuestas oportunas y relevantes.\n\nUtiliza expresiones temporales adecuadas (\"hoy\", \"mañana\", \"esta semana\", etc.).\n\nDirectrices Importantes:\n\nResponde siempre en HTML válido y compatible con Telegram Bot API.\nUsa únicamente estas etiquetas: <b>, <i>, <u>, <code>, <pre> y <a href=\"...\">.\nNo uses <p>, <ul>, <li>, <div>, <span> ni otras etiquetas.\nNo incluyas saltos de línea tipo \\n. Usa <br> para separar líneas.\nNo incluyas caracteres especiales como !, ¡, *, _, ~ o emojis.\nLa respuesta debe ser texto limpio y formateado solo con esas etiquetas.\n\nMantén el contexto de la conversación para respuestas coherentes.\n\nHaz preguntas aclaratorias si algo no está claro.\n\nAccede solo a la información necesaria para cumplir la solicitud.\n\nSi algo está fuera de tus capacidades, dilo claramente y ofrece alternativas.\n\nInformacion extra:\nAñadir info extra. Recomiendo añadir los nombres de tus calendarios, asi no fallara al buscar entre distintos calendarios.\n\nTu objetivo:\nFacilitar la vida del usuario, ayudarle a organizarse y ser más productivo, anticipando sus necesidades y manteniendo una comunicación fluida y natural.\n"
+        }
+      },
+      "id": "f958d2f6-6602-4443-bfae-ef628af09b84",
+      "name": "Alia",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        80,
+        -416
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get many events in Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "Alia",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an event in Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "Alia",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update an event in Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "Alia",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete an event in Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "Alia",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get MEMORIA": {
+      "ai_tool": [
+        [
+          {
+            "node": "Alia",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardar Memoria": {
+      "main": [
+        [
+          {
+            "node": "Parse1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Guardar",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Parse1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Audio o Texto": {
+      "main": [
+        [
+          {
+            "node": "Guardar Memoria",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Guardar Memoria1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Alia",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "BBDD": {
+      "ai_memory": [
+        [
+          {
+            "node": "Alia",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recibir Audio": {
+      "main": [
+        [
+          {
+            "node": "Transcribir",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcribir": {
+      "main": [
+        [
+          {
+            "node": "Alia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pasar texto": {
+      "main": [
+        [
+          {
+            "node": "Alia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Audio o Texto1": {
+      "main": [
+        [
+          {
+            "node": "Recibir Audio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pasar texto",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Mensaje enviado": {
+      "main": [
+        [
+          {
+            "node": "Audio o Texto1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardar Memoria1": {
+      "main": [
+        [
+          {
+            "node": "Guardar",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Parse",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Parse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardar": {
+      "main": [
+        []
+      ]
+    },
+    "Parse1": {
+      "main": [
+        [
+          {
+            "node": "Formatar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse": {
+      "main": [
+        [
+          {
+            "node": "Contestar Texto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FORMATO": {
+      "main": [
+        [
+          {
+            "node": "GUARDAR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GUARDAR": {
+      "main": [
+        [
+          {
+            "node": "Audio o Texto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dar voz": {
+      "main": [
+        [
+          {
+            "node": "Contestar audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contestar Texto": {
+      "main": [
+        []
+      ]
+    },
+    "Formatar": {
+      "main": [
+        [
+          {
+            "node": "Dar voz",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alia": {
+      "main": [
+        [
+          {
+            "node": "FORMATO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "466717e4-6046-4fbe-ab6f-c9855833d47a",
+  "meta": {
+    "templateId": "voice_assistant_agent_with_telegram",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d0566d6c5c16154c63c1a5fe96011035522d06733d14b5aa5c910c2207534d04"
+  },
+  "id": "MR7fJuqFMLMRcvGP",
+  "tags": []
+}
