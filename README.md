@@ -13,6 +13,8 @@ Puede hablar contigo, recordar información importante y responder en texto o po
 - Consulta y gestiona eventos en Google Calendar.  
 - Todo automatizado dentro de n8n.
 
+   ![Video Memoria](imgs/video1.gif "")
+
 ---
 
 ## Cómo funciona
@@ -24,6 +26,8 @@ Puede hablar contigo, recordar información importante y responder en texto o po
 5. Si aprende algo nuevo, lo guarda automáticamente en la hoja.
 6. Decide si contestar mediante audio o texto.
    
+   ![Imagen workflow](imgs/Captura1.PNG "")
+
 ---
 
 ## Cómo usarlo
@@ -35,13 +39,18 @@ Puede hablar contigo, recordar información importante y responder en texto o po
    - Gemini
    - Telegram Bot  
    - ElevenLabs  
-3. Ejecuta el flujo y empieza a hablar con Alia.
+3. Edita el prompt y aclarale tu informacion (Si tienes calendarios compartidos dales nombre)
+4. Ejecuta el flujo y empieza a hablar con Alia.
+
+   ![Video calendario](imgs/video2.gif "")
 
 ---
 
 ## Memoria persistente (Google Sheets)
 
 Dejaré el excel para descargar
+
+   ![Imagen sheets](imgs/Captura2.PNG "")
 
 ---
 
